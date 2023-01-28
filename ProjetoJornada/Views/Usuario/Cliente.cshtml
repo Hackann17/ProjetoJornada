@@ -1,0 +1,28 @@
+﻿@model ProjetoJornada.Models.Usuario;
+@using Newtonsoft.Json;
+@using Microsoft.AspNetCore.Http;
+@{ 
+    Layout = "_Layout";
+
+    Usuario c = JsonConvert.DeserializeObject<Usuario>(Context.Session.GetString("cliente"));
+}
+
+<h1 class="titulo_cliente">Bem vindo, @c.Nome!</h1>
+<img src="~/img/jojo.png" alt="" id="img_cliente">
+
+<form method="post" asp-controller="Usuario" asp-action="Alterar">
+    <p class="email_autual_text">Seu e-mail: @c.Email</p>
+    <p class="senha_antiga_text">Senha atual: @c.Senha</p>
+    <p class="senha_nova_text">Senha nova:</p>
+    <input name="senha" type="text" class="senha_nova">
+    <br /><br />
+    @TempData["alterado"]
+    <br />
+    <button type="submit" class="btn_mudar_dados_cliente">Alterar Dados</button>
+
+</form>
+
+<br />
+<br />
+<br /><br />
+

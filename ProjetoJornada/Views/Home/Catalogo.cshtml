@@ -1,0 +1,61 @@
+﻿@model IEnumerable<ProjetoJornada.Models.Produto>
+@using Microsoft.AspNetCore.Mvc;
+@using Microsoft.AspNetCore.Http;
+@{
+
+    ViewData["Title"] = "Catalogo";
+
+
+
+    if (Context.Session.GetString("admin") != null)
+    {
+        Layout = "_LayoutAdm";
+    }
+    else
+    {
+        Layout = "_Layout";
+    }
+
+}
+<link rel="stylesheet" href="~/css/catalogo.css">
+<div class="mae_catalogo">
+    <br>
+    <h1 class="titulo_catalogo">Todos os Produtos</h1>
+
+
+    <div class="linha_de_produtos" id="linha1">
+
+        @foreach (var item in Model)
+        {
+            @if (item.Quant > 0)
+            {
+        <a href="/Produto/Teladescricao/@item.Id">
+            <div class="container">
+                <div class="conteudo_container">
+
+                    <p class="Nome_produto_cadastro"> @item.Nome </p>
+
+                    @{ string formato = "data:image/jpeg;base64," + Convert.ToBase64String(item.ImgArquivo);}
+
+                    @Html.ActionLink("", "Teladescricao", "Produto", new { id = item.Id })
+                    <img src="@formato" class="img_produto_cadastro">
+                    <p class="valor_produto_cadastro"> R$@item.Preco.ToString("#.#0") </p>
+
+
+
+                </div>
+            </div>
+        </a>
+            }
+
+        }
+
+
+
+    </div>
+
+    <br />
+    <p class="text_final"> Parece que você chegou ao fim !</p>
+    <br />
+    
+</div>

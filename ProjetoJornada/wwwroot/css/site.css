@@ -1,0 +1,454 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #9BE8E6;
+    height: 140px;
+    width: 100%;
+    display: flex;
+}
+
+.lista_nav ul {
+    list-style-type: none;
+    margin-left: 37%;
+}
+
+.lista_nav ul li { 
+    font-family: Arial, sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    margin: 42px 10px 30px 10px;
+    display: inline-block;
+}
+
+.icon_carrinho {
+    cursor: pointer;
+    margin: 30px 40px 30px 70px;
+    width: 65px;
+    height: 60px;
+}
+
+.icon_adm {
+    color: #753E06;
+    cursor: pointer;
+    margin: 30px 20px 30px 70px;
+    width: 60px;
+    height: 60px;
+}
+
+.ancora_nav {
+    color: #753E06;
+    text-decoration: none;
+}
+
+.ancora_nav:hover {
+    color: #5C3004;
+}
+
+.ancora_nav:active {
+    color: #FF55A1;
+       
+}
+
+#btn_login_nav {
+    font-size: 22px;
+    background-color: #FFA8CF;
+    color: #753E06;
+    border-radius: 8px;
+    font-weight: 600;
+    border: 3px solid #FFA8CF;
+}
+
+#btn_login_nav:hover{
+    color:#fff;
+}
+
+    #btn_login_nav:active {
+        color: #fff;
+        background-color: #eb8db7;
+        border: 5px solid #eb83b1;
+    }
+
+
+    .icon_logo {
+        cursor: pointer;
+        margin: 15px 20px 15px 50px;
+        width: 170px;
+        height: 115px;
+    }
+
+#btn_deslogar_nav {
+    font-size: 22px;
+    background-color: #FFA8CF;
+    color: #753E06;
+    border-radius: 8px;
+    font-weight: 600;
+    border: 3px solid #FFA8CF;
+}
+
+    #btn_deslogar_nav:hover {
+        color: #fff;
+    }
+
+    
+
+/*--------------cadastro-------------------*/
+#Cadastro {
+    display: none;
+    background-color: rgb(213, 211, 211);
+    margin: 5% 30% 10% 30%;
+    border-radius: 8%;
+}
+
+#Titulocadastro {
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    font-family: 'Inter', sans-serif;
+}
+
+#Entradas {
+    margin: 0% 0% 0% 16%;
+    font-family: 'Inter', sans-serif;
+}
+
+.entrada1 {
+    width: 80%;
+    padding-top: 12px;
+}
+
+#Links {
+    margin: 5% 0% 5% 10%;
+    font-family: 'Inter', sans-serif;
+}
+
+#direita {
+    margin-left: 40%;
+}
+
+#Cadastrar {
+    font-family: 'Inter', sans-serif;
+    font-size: x-large;
+    text-align: center;
+    margin: 2% 0 5% 25%;
+    width: 50%;
+    height: 45px;
+}
+
+/*--------------login-------------------*/
+
+
+#titulo {
+    display: inline-flex;
+    margin-left: 14em;
+}
+
+.btn-close {
+    margin-left: 12em;
+    margin-top: 10px;
+}
+
+.form_login {
+    box-shadow :4px 4px 4px;
+    margin: 10% 35% 0 35%;
+    height: 500px;
+    background-color: #ffffff;
+    border-radius: 6%;
+}
+
+#titulo_login {
+    font-size: 50px;
+    font-weight: 500;
+    color: #753E06;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    margin-top: 5%;
+}
+
+#entrada {
+    font-family: 'Inter', sans-serif;
+    margin: 0% 20% 5% 20%;
+    align-items: center;
+}
+
+.input_login {
+    background-color: #C7F0EE;
+    border-radius: 10px;
+    width: 95%;
+    height: 35px;
+}
+
+.opcoes {
+    display: flex;
+}
+
+.opcoes a {
+    color: #FF55A1;
+    margin: 0% 15% 5% 15%;
+    font-family: 'Inter', sans-serif;
+}
+
+#esquecisenha {
+    margin-left: 17%;
+}
+
+.subtitulo_login {
+    margin:20px 0 0 0;
+    font-size:25px;
+    color: #5C3004;
+}
+
+.button_login {
+    border-color: #5C3004;
+    border-radius:10px;
+    font-size:20px;
+    color: #5C3004;
+    background-color: #F590BD;
+    margin-left: 220px;
+    margin-bottom: 20px;
+    width: 24%;
+    height: 45px;
+}
+
+#link {
+    text-decoration:none;
+    cursor:pointer;
+    color: #753E06;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+}
+
+#home {
+    text-decoration:none;
+    justify-content: center;
+}
+
+
+
+/*--------------rodapé-------------------*/
+
+footer {
+    height: 307px;
+    width: 100%;
+    background-color: #753E06;
+}
+
+.conteudo_footer {
+    color:white;
+    width: 100%;
+}
+
+.icon_logo_rodape {
+    margin: 40px 300px 0px 120px;
+    width: 190px;
+    height: 160px;
+}
+
+.info_rodape {
+    color: rgb(246, 243, 255);
+}
+
+.textos_rodape {
+    display: inline-flex;
+}
+
+.info_rodape p {
+    cursor: pointer;
+    font-size: 18px;
+    font-family: Arial;
+    display: inline-flex;
+    margin: 30px 0 0 120px;
+}
+
+.logos_rodape {
+    cursor: pointer;
+    margin-left: 670px;
+    display: flex;
+}
+
+.icon_rodape_grupo1 img {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    margin: 10px 10px 10px 10px;
+}
+
+.icon_rodape_grupo2 img {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    margin: 10px 10px 10px 10px;
+}
+
+.icon_rodape_grupo3 img {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    margin: 10px 10px 10px 10px;
+}
+
+.rodape3{
+    margin-left: 3.7em;
+}
+
+.espaco-rodape{
+    width: 7.3em;
+}
+
+.creditos {
+    color: #C1A993;
+    margin: 18px 0 5px 0;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+/*Página do cliente*/
+.titulo_cliente {
+    color: #753E06;
+    text-align: center;
+    font-size: 30px;
+    font-family: arial;
+    margin-bottom: 40px;
+}
+
+#img_cliente {
+    margin-left: 50%;
+    transform: translate(-50%);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 4px solid #FF55A1;
+    margin-bottom: 40px;
+}
+
+.email_autual_text {
+    margin: 3px;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 35%;
+    color: #5C3004;
+}
+
+#email_antigo {
+    margin: 3px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 35%;
+    color: #5C3004;
+}
+
+.email_novo_text {
+    margin: 3px;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 35%;
+    color: #5C3004;
+}
+
+.email_novo {
+    margin-bottom: 10px;
+    width: 300px;
+    height: 30px;
+    border-radius: 7px;
+    border: 2px solid #fc96c4;
+    background-color: #FFA8CF;
+    margin-left: 35%;
+    color: #753E06;
+    font-size: 20px;
+}
+
+.senha_antiga_text {
+    margin: 3px;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 35%;
+    color: #5C3004;
+}
+
+.senha_antiga {
+    margin: 3px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 35%;
+    color: #5C3004;
+    margin-bottom: 10px;
+}
+
+.senha_nova_text {
+    margin: 3px;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 35%;
+    color: #5C3004;
+}
+
+.senha_nova {
+    color: #753E06;
+    font-size: 20px;
+    margin-left: 35%;
+    width: 300px;
+    height: 30px;
+    border-radius: 7px;
+    border: 2px solid #fc96c4;
+    background-color: #FFA8CF;
+}
+
+.btn_mudar_dados_cliente {
+    color: #5C3004;
+    font-size: 20px;
+    margin-left: 50%;
+    transform: translate(-50%);
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid #95DAD8;
+    background-color: #C7F0EE;
+}
+
+    .btn_mudar_dados_cliente:hover {
+        color: #95DAD8;
+    }
+
+    .btn_mudar_dados_cliente:active {
+        background-color: #95DAD8;
+        color: #fff;
+    }
+
+.container_produto_ja_comprado {
+    width: 70%;
+    border-radius: 5px;
+    background-color: #FFE9D4;
+    margin-left: 50%;
+    transform: translate(-50%);
+}
+
+.titulo_produtos_comprados {
+    margin: 5px 0 10px 50px;
+    color: #FF55A1;
+    font-size: 30px;
+    font-family: arial;
+}
+
+.info_client_ja {
+    margin: 3px;
+    font-size: 25px;
+    font-family: Arial;
+    margin-left: 10%;
+    color: #5C3004;
+    font-weight: 600;
+}
+
+.linha_produto_ja {
+    border: 2px solid #5C3004;
+    width: 85%;
+}
+
+#vazio {
+    height: 7px;
+}

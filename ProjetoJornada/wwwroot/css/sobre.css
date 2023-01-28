@@ -1,0 +1,108 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+.titulo1 {
+    font-size: 55px;
+    font-family: Arial;
+    text-align: center;
+    margin: 0% 2% 4% 2%;
+    color: #753E06;
+}
+
+.titulo3 {
+    font-size: 50px;
+    font-family: Arial;
+    text-align: center;
+    margin: 0% 2% 4% 2%;
+    color: #95DAD8;
+}
+
+section {
+    display: inline-flex;
+}
+
+.imagem {
+    margin: 0% 0% 5% 10%;
+    width: 35%;
+    height: 45%;
+}
+
+.imagem2 {
+    margin: 0% 10% 5% 0%;
+    width: 35%;
+    height: 50%;
+}
+
+#paragrafo {
+    margin: 0% 10% 0% 10%;
+}
+
+#sobreEquipe {
+    background-color: #FFF1D4;
+}
+
+.paragrafos_sobre {
+    margin: 0% 10% 0% 5%;
+    font-size: x-large;
+    color: #5C3004;
+    
+}
+
+
+.form_contato {
+    margin-left: 50%;
+    transform: translate(-50%);
+    border-radius: 20px;
+    border: 6px solid #FF55A1;
+    width: 900px;
+}
+
+#titulo_form_contato {
+    font-size: 45px;
+    font-family: arial;
+    text-align: center;
+    color: #753E06;
+}
+
+.text_form_contato {
+    color: #5C3004;
+    font-size: 30px;
+    font-family: arial;
+    margin-left: 25%;
+}
+
+#input_form_email {
+    margin-left: 25%;
+    background-color: #C7F0EE;
+    border: 4px solid #9BE8E6;
+    width: 45%;
+    border-radius: 5px;
+    font-size: 25px;
+}
+
+    #input_form_email:active {
+        background-color: #9BE8E6;
+    }
+
+#input_form_texto {
+    margin-left: 25%;
+    background-color: #C7F0EE;
+    border: 4px solid #9BE8E6;
+    width: 45%;
+    border-radius: 5px;
+    font-size: 25px;
+}
+
+#btn_form_contato {
+    border-radius: 5px;
+    color: #753E06;
+    background-color: #FFA8CF;
+    font-size: 30px;
+    margin-left: 50%;
+    transform: translate(-50%);
+    border: 6px solid #FFA8CF;
+    margin-top: 13px;
+    margin-bottom: 20px;
+}

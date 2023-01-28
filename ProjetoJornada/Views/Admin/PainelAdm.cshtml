@@ -1,0 +1,54 @@
+﻿@model ProjetoJornada.Models.Usuario
+@using Microsoft.AspNetCore.Mvc;
+@using Microsoft.AspNetCore.Http;
+
+
+}
+@if (Context.Session.GetString("admin") != null)
+{
+    ViewData["Title"] = "PainelAdm";
+
+
+    Layout = "_LayoutAdm";
+
+    <link rel="stylesheet" href="~/css/adm.css">
+
+
+
+
+    <main>
+        <h2 class="titulo_bem_vindo">Seja bem-vindo, administrador!</h2>
+        <br>
+        <a href="/Home"><button id="voltar_home_adm">Voltar para Home</button></a><br><br>
+        <!-- Ala de gerenciamento de produtos -->
+        <h3 class="titulos_area_adm">Gerenciamento de Produtos</h3>
+        <a href="/Admin/CadastroProduto"><button id="adicionarProduto" name="adicionarProduto">Adicionar Produto</button></a>
+
+        <hr class="linha_separacao">
+
+        <div class="area_alterarcao_produto">
+            <div>
+                <form id="inativar" method="post" asp-controller="Produto" asp-action="Inativar">
+                    <h3 class="titulos_area_adm">Inativar ou Alterar Produto</h3>
+                    <p id="text_insercao_cod_prod">Insira o código do produto:</p>
+                    <input type="text" name="ID_Produto" maxlength="3" class="insercao_cod_prod">
+                    <button class="btns_anterar_intivar" type="submit">Inativar Produto</button>
+                </form>
+            </div>
+        </div>
+
+
+        <hr class="linha_separacao">
+
+        <!-- Ala de listagem de clientes -->
+        <h3 class="titulos_area_adm">Listagem de Clientes</h3>
+        <a href="/Admin/ListarClientes"><button id="listarClientes" name="listarClientes">Ver todos os clientes</button></a>
+        <hr class="linha_separacao">
+      
+    </main>
+
+}
+else
+{
+    <p>Voce nao pode acessar essa página</p>
+}

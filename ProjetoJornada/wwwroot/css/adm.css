@@ -1,0 +1,136 @@
+﻿@charset "UTF-8";
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.titulo_bem_vindo {
+    font-size: 37px;
+    color: #9b5712;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.titulos_area_adm {
+    color: #5C3004;
+    font-size: 30px;
+    font-family: arial;
+    font-weight: 600;
+    text-align: justify;
+}
+
+.titulos_reg_venda {
+    color: #FF55A1;
+    font-size: 30px;
+    font-family: arial;
+    font-weight: 500;
+    text-align: justify;
+}
+
+.linha_separacao {
+    margin-top: 2%;
+    border: 2px solid #95DAD8;
+}
+
+main {
+    margin: 0 25%;
+}
+
+#voltar_home_adm {
+    color: #5C3004;
+    border: 2px solid #68c0bd;
+    background-color: #9BE8E6;
+    border-radius: 5px;
+    font-family: arial;
+    font-size: 15px;
+    width: 200px;
+    height: 25px;
+}
+
+.insercao_cod_prod {
+    color: #bf3070;
+    background-color: #EED1B5;
+    border: none;
+    width: 260px;
+    height: 30px;
+    font-size: 30px;
+}
+
+#text_insercao_cod_prod {
+    font-size: 20px;
+    font-family: Arial;
+    color: #753E06;
+}
+
+#listarClientes {
+    background-color: #ffffff;
+    color: #5C3004;
+    border: none;
+    background-color: #FFA8CF;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 25px;
+    width: 290px;
+    height: 60px;
+    margin-left: 50%;
+    transform: translate(-50%);
+    margin-top: 2%;
+}
+
+.item_reg_venda {
+    color: #753E06;
+    font-weight: 600;
+}
+
+.teste {
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    line-height: 80px;
+    text-align: center;
+    font-weight: bold;
+    float: left;
+}
+
+#adicionarProduto {
+    background-color: #ffffff;
+    color: #5C3004;
+    border: 5px solid #FFA8CF;
+    border-radius: 10px;
+    font-size: 25px;
+    width: 260px;
+    height: 60px;
+    margin-left: 50%;
+    transform: translate(-50%);
+    margin-top: 2%;
+}
+
+.produtos {
+    background-color: #FFE4CC;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.area_alterarcao_produto {
+    display: flex;
+}
+
+#botoes_alteracao {
+    margin-left: 15%;
+}
+
+.btns_anterar_intivar {
+    margin-left: 200px;
+    color: #753E06;
+    border: none;
+    background-color: #FFA8CF;
+    font-family: arial;
+    font-size: 22px;
+    border-radius: 10px;
+    width: 200px;
+    height: 34px;
+    margin: 2% 5%;
+    margin-bottom: 6.5%;
+}

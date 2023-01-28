@@ -1,0 +1,149 @@
+﻿@using Microsoft.AspNetCore.Mvc;
+@using Microsoft.AspNetCore.Http;
+
+@{
+    ViewData["Title"] = "Index";
+
+
+
+    if (Context.Session.GetString("admin") != null)
+    {
+        Layout = "_LayoutAdm";
+    }
+    else
+    {
+        Layout = "_Layout";
+    }
+
+
+}
+
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/home.css" />
+
+    <title>Home</title>
+
+</head>
+<section class="section1">
+
+    <div class="content">
+        <div class="slides">
+            <!---->
+            <!--CARROSSEL-->
+
+            <input type="radio" name="radio" id="radio1" checked class="bolinha_radio"> <!-- checked deixa checado-->
+            <input type="radio" name="radio" id="radio2" class="bolinha_radio">
+            <input type="radio" name="radio" id="radio3" class="bolinha_radio">
+            <input type="radio" name="radio" id="radio4" class="bolinha_radio">
+            <!--o nome é igual pois sao do mesmo grupo de radios-->
+
+            <div class="slide s1">
+                <img src="~/img/Nova linha.png" alt="Nova Linha">
+            </div>
+
+            <div class="slide">
+                <img src="~/img/Vegano Tambem é gente.png" alt="Vegano também é gente">
+            </div>
+
+            <div class="slide">
+                <img src="~/img/Nem todo mundo gosta.png" alt="Nem todo mundo gosta, mas você não é todo mundo">
+            </div>
+
+            <div class="slide">
+                <img src="~/img/metaverso.png" alt="metaverso">
+            </div>
+
+            <div class="navegacao_de_slides">
+                <label class="barra" for="radio1"></label>
+                <label class="barra" for="radio2"></label>
+                <label class="barra" for="radio3"></label>
+                <label class="barra" for="radio4"></label>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+<!--PROPAGANDA DE PRODUTOS-->
+
+<div class="linha">
+    <h1 class="titulo_mini_carrosel">Produtos em oferta</h1>
+    <div class="enquadramento">
+
+        <a href="" class="decoracao_card">
+            <div class="card">
+                <img src="~/img/Chocolate.png" alt="Chocolate" class="img_carrosel">
+                <p class="nome_prod_carrosel">Sorvete sabor Chocolate</p>
+            </div>
+        </a>
+
+        <a href="" class="decoracao_card">
+            <div class="card">
+                <img src="~/img/byts.png" alt="Bytes" class="img_carrosel">
+                <p class="nome_prod_carrosel">Sorvete sabor Bytes</p>
+            </div>
+        </a>
+
+        <a href="" class="decoracao_card">
+            <div class="card">
+                <img src="~/img/baunilia.png" alt="Baunilia" class="img_carrosel">
+                <p class="nome_prod_carrosel">Sorvete sabor Baunilia</p>
+            </div>
+        </a>
+
+        <a href="" class="decoracao_card">
+            <div class="card">
+                <img src="~/img/flocos.png" alt="Flocos" class="img_carrosel">
+                <p class="nome_prod_carrosel">Sorvete sabor flocos</p>
+            </div>
+        </a>
+
+        <a href="" class="decoracao_card">
+            <div class="card">
+                <img src="~/img/Frutas vermelahas.png" alt="Frutas Vermelhas" class="img_carrosel">
+                <p class="nome_prod_carrosel">Sorvete sabor de Frutas Vermelhas</p>
+            </div>
+        </a>
+
+    </div>
+</div>
+
+<!--PROPAGANDAS-->
+<section class="section2">
+
+    <div class="propagandas">
+        <div class="conteudo_propagandas">
+            <img src="~/img/morangoOff.png" class="propaganda" alt="">
+            <img src="~/img/chocolateSale.png" class="propaganda" alt="">
+        </div>
+    </div>
+
+
+</section>
+
+
+
+<!--LOCALIZACAO-->
+
+
+<section class="section3">
+
+    <a href=""><img src="~/img/mapa.png" alt="" class="img_localisacao"></a>
+
+    <div class="textos_localizacao">
+        <h2><span id="titulo_local">Loja mais próxima</span></h2>
+        <br>
+        <p class="info_localizacao"> Nossa central fica localizada na escola SENAI Profº Drº Euryclides de Jesus Zerbini, onde todos os nossos produtos são preparados com carinho!
+
+        </p>
+            
+    </div>
+
+</section>
+
+</html>

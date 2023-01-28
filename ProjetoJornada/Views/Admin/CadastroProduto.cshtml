@@ -1,0 +1,56 @@
+﻿@model ProjetoJornada.Models.Produto
+@{
+    Layout = null;
+
+
+}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novo Produto</title>
+    <link rel="stylesheet" href="~/css/CadastroProduto.css">
+</head>
+<body>
+
+    
+    <main>  
+        <h1 class="titulo_NovoProduto">Novo Produto</h1>
+        <div id="novoProduto">
+            <form method="post" enctype="multipart/form-data" asp-controller="Produto" asp-action="Cadastrar" id="formulario">
+                @TempData["msg"]
+                <br />
+                <label for="nome" asp-for="Nome" class="label_NProduto">Nome do Produto:</label>
+                <br>
+                <input type="text" name="nome" asp-for="Nome" id="nomeProduto" maxlength="50" class="caixa_texto_produto">
+                <br><br>
+
+                <label for="preco" asp-for="Preco" class="label_NProduto">Valor: R$</label>
+                <input name="preco" asp-for="Preco" id="valor" class="caixa_texto_produto">
+
+                <label for="quant" id="lblQuantidad" asp-for="Quant" class="label_NProduto">Quantidade:</label>
+                <input type="number" name="quant" id="quantidade" min="1" asp-for="Quant" maxlength="3" class="caixa_texto_produto">
+
+                <br><br>
+                <label for="descricao" asp-for="Descricao" class="label_NProduto">Descrição:</label>
+                <br>
+                <textarea id="descricao" name="descricao" asp-for="Descricao" cols="30" rows="10" class="caixa_texto_produto"></textarea>
+                <br><br>
+                <label for="imagem" class="label_NProduto">Imagem:</label>
+                <br>
+                <label for="image" class="input_file">Escolher imagem</label>
+                <input type="file" name="image" id="image">
+                <br>
+
+                <a href="/Admin/PainelAdm" class="voltaHome"> &lt- Voltar para a Administração</a>
+                <button type="submit" id="btnConcluir" class="btn btn-primary" value="Concluir">Concluir</button>
+
+
+            </form>
+        </div>
+    </main>
+</body>
+</html>

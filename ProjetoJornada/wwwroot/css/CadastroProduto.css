@@ -1,0 +1,112 @@
+﻿@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap');
+
+/* Configuração do corpo da página */
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+/* Configuração do conteúdo em si*/
+.titulo_NovoProduto {
+    text-align: center;
+    color: #5C3004;
+    font-family: arial;
+    font-weight: 600;
+    font-size: 50px;
+}
+
+.label_NProduto {
+    color: #753E06;
+    font-size: 30px;
+    font-family: arial;
+}
+
+.caixa_texto_produto {
+    background-color: #C7F0EE;
+    color: #753E06;
+    border: 2px solid #8adbd9;
+    border-radius: 5px;
+}
+
+
+#image {
+    display: none;
+}
+
+label[for="image"] {
+    margin-top: 5%;
+    font-family: 'Segoe UI','Open Sans';
+    cursor: pointer;
+    background-color: #FFA8CF;
+    border: 5px solid #FFA8CF;
+    border-radius: 5px;
+    font-size: 20px;
+    color: #5C3004;
+}
+
+
+/* Configuração dos estilos de toda a parte do formulário*/
+#formulario {
+    padding-top: 40px;
+    margin-left: 15%;
+}
+
+#novoProduto {
+    border: 5px solid #FFA8CF;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 0 29%;
+    font-size: 30px;
+}
+
+#nomeProduto {
+    width: 510px;
+    font-size: 30px;
+}
+
+#btnConcluir {
+    cursor: pointer;
+    margin-top: 4%;
+    margin-left: 35%;
+    background-color: #FFE4CC;
+    font-size: 26px;
+    border-radius: 5px;
+    color: #FF55A1;
+    width: 150px;
+    height: 40px;
+    border: none;
+}
+
+input#valor {
+    background-color: #C7F0EE;
+    width: 90px;
+    height: 30px;
+    font-size: 30px;
+}
+
+#descricao {
+    font-size: 30px;
+}
+
+#lblQuantidade {
+    margin-left: 35px;
+}
+
+input#quantidade {
+    width: 90px;
+    height: 30px;
+    font-size: 30px;
+}
+
+.conclusao {
+    display: flex;
+}
+
+.voltaHome {
+    color: #FF55A1;
+    font-size: 20px;
+    margin-top: 6%;
+}

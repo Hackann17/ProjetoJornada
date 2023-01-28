@@ -1,0 +1,172 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-repeat: no-repeat; 
+    background-size: cover;
+}
+
+.mae_carrinho{
+    color: #753E06;
+    font-size: 25px;
+    background-color: white;
+    width: 75%;
+    height: 100%;
+    margin-left: 50%;
+    transform: translate(-50%);
+}
+
+.secao_finalizar1{
+    background-color: #FFE4CC;
+}
+
+.secao_finalizar2{
+    background-color: #FFE4CC;
+}
+
+.btn-close{
+    margin-left: 95%;
+}
+
+.mudanca_cep{
+    background-color: rgb(255, 255, 255);
+   text-align: center;
+}
+
+.titulo_carrinho2{
+    color: #5C3004;
+    margin: 0 0 2% 10%;
+}
+
+.container_infor_entrega{
+    width: 90%;
+    margin-left: 50%;
+    transform: translate(-50%);
+    
+}
+.container_infor_entrega_texto{
+    display: flex;
+}
+
+.infor_entrega{
+    margin: 0 0 0 8%;
+    font-size: 20px;
+    font-family: arial;
+}
+
+.infor_entrega p{
+color:#753E06;
+}
+
+.infor_entrega_add{
+    margin: 0 0 0 15%;
+}
+
+.btn_carrinho2{
+    color:#fff;
+    border: none;
+    background-color: #FF55A1;
+    font-family: arial;
+    font-size: 25px;
+    border-radius: 10px;
+    width: 400px;
+    height: 40px;
+    margin-left:50% ;
+    transform:translate(-50%);
+    margin-bottom: 5%;
+}
+
+.area_botoes_info_entrega{
+    width: 80%;
+    display: flex;
+ margin-left: 50%;
+ transform: translate(-50%);
+}
+
+.text_complemento{
+    color: #5C3004;
+    font-size: 23px;
+    font-family: arial;
+}
+
+
+.input_complemento{
+    width: 100%;
+    height: 26px;
+    font-size: 20px;
+    color: #753E06;
+    background-color: #EDCDAF;
+    border: none;
+    border-radius: 5px;
+}
+
+
+.area_botoes_info_entrega{
+    margin-left: 50%;
+    transform: translate(-50%);
+}
+
+.conteiner_pagamento_checkbox{
+    margin-bottom: 2%;
+    margin-left: 50%;
+    transform: translate(-50%);
+    width: 80%;
+}
+
+.pagamento_checkbox{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+#botao_gerar{
+    margin-bottom: 2.8%;
+    margin-left: 50%;
+    transform: translate(-50%);
+    width: 20%; 
+}
+
+.linha_conteiner_pagamento_checkbox{
+    margin-bottom: 20px;
+}
+
+.efetuacao_pediodo{
+    width: 100%;
+}
+
+.infor_final_pedido{
+    color: #753E06;
+    font-size: 25px;
+    text-align: center;
+}
+
+#titulo_tudo_certo{
+    font-size: 45px;
+    color: #fff;
+    text-align: center;
+}
+
+#btn_volt_home{
+    text-decoration:none;
+    color: #5C3004;
+    border: 3px solid #F590BD;
+    background-color: #fff;
+    margin-bottom: 2.8%;
+    margin-left: 50%;
+    transform: translate(-50%);
+    width: 300px;
+    height: 50px;
+}
+
+#entorno{
+    background-color: #EED1B5;
+    height: 60px;
+    margin-bottom: 30px;
+}
+
+#entorno_top{
+    background-color: #FFE4CC;
+    height: 40px;
+}

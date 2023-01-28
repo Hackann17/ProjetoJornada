@@ -1,0 +1,82 @@
+﻿@model IEnumerable<ProjetoJornada.Models.Produto>
+@using Newtonsoft.Json;
+@using Microsoft.AspNetCore.Mvc;
+@using Microsoft.AspNetCore.Http;
+
+@{ 
+
+    if(Context.Session.GetString("admin") != null)
+    {
+        Layout = "_LayoutAdm";
+    }
+}
+
+@{ 
+
+
+    Produto p = JsonConvert.DeserializeObject<Produto>(TempData["Produto"].ToString());
+
+    Usuario c = null;
+
+    if(Context.Session.GetString("cliente") != null)
+    {
+        Layout = "_Layout";
+        c = JsonConvert.DeserializeObject<Usuario>(Context.Session.GetString("cliente"));
+    } else
+    {
+        c = new Usuario(null, null, null, null, null, 0);
+    }
+
+
+}
+
+
+}
+
+<link rel="stylesheet" href="~/css/produto.css">
+
+<div class="mae_produto">
+    <br><br>
+        <div class="conteiner_info_produto">
+            <div class="img_info_produto">
+                @{ string formato = "data:image/jpeg;base64," + Convert.ToBase64String(p.ImgArquivo);}
+                <img src="@formato" class="img_produto">
+            </div>
+
+            <div class="text_info_produto">
+                <h1 class="titulo_produto"> @p.Nome</h1>
+                <p class="valor_produto">R$@p.Preco.ToString("#.#0") </p>
+                <p class="quantidade_estoque">Quantidade no estoque: @p.Quant</p>
+                <p class="texto_quantidade_produto"></p>
+                <input type="number" class="quantidade_produto" min="1"><br>
+
+                
+
+                    <button class="btn_adicionar_carrinho">
+
+                        @Html.ActionLink("Adicionar ao carrinho", "AdicionarAoCarrinho", "Produto",
+                       new { cpf = c.Cpf, idProduto = p.Id, pNome = p.Nome , pPreco = p.Preco})
+
+                    </button>
+                
+            </div>
+        </div> <br /><br />
+
+    <div class="container_descrisao_produto">
+        <div class="internal_descrisao_produto">
+            <div class="conteudo_descrisao_produto">
+                <br>
+                <h2 class="titulo_conteudo_descrisao_produto">Descrição do Produto</h2>
+                <p class="descr_produto"> @p.Descricao</p>
+                <br>
+                <br>
+                <p class="cod_prod">Código do produto: @p.Id</p>
+                <br>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <img src="~/img/NovosProdutos.png" alt="" class="propaganda_produto">
+    </div>
+</div>

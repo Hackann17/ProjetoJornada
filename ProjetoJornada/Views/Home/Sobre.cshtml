@@ -1,0 +1,71 @@
+﻿@using Microsoft.AspNetCore.Mvc;
+@using Microsoft.AspNetCore.Http;
+
+
+@{ if (Context.Session.GetString("admin") != null)
+    {
+        Layout = "_LayoutAdm";
+    }
+    else
+    {
+        Layout = "_Layout";
+    }
+}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre o produto </title>
+    <link rel="stylesheet" href="~/css/sobre.css">
+</head>
+<body>
+
+    <h1 class="titulo1">Informações do produto </h1>
+
+    <section>
+
+        <img class="imagem" src="~/img/tradicao.png" alt="imagem bem legal">
+
+        <p class="paragrafos_sobre">
+            Com essa nova ideia, focamos em inovação e solução de adversidades. A isenção de lactose e glúten atrai pessoas de diversas condições, e tudo isso sendo gostoso.
+        </p>
+
+    </section>
+
+
+
+    <h1 class="titulo3">Equipe de programadores</h1>
+
+    <section>
+
+
+
+        <p id="paragrafo" class="paragrafos_sobre">
+            Uma equipe de 4 alunos do curso de DS do SENAI Prof. Dr. Euryclides de Jesus Zerbini se organizou para desenvolver essa aplicação web, foram divididas as tarefas de acordo com as aptidões de cada integrante para a melhor distribuição das atividades de front, backend e desenvolvimento mobile. <br><br>
+        </p>
+        <img class="imagem2" src="~/img/nois.jpg" alt="imagem bem legal">
+
+    </section>
+
+
+    <form action="" class="form_contato">
+
+        <h2 id="titulo_form_contato">Entre em contato</h2>
+
+        <p class="text_form_contato">Email:</p>
+        <input type="text" id="input_form_email">
+
+        <p class="text_form_contato">Coloque sua mensagem :</p>
+        <textarea name="" cols="30" rows="10" id="input_form_texto"></textarea><br>
+
+        <button id="btn_form_contato">Enviar</button>
+
+
+    </form>
+    <br /><br />
+
+</body>
+</html>

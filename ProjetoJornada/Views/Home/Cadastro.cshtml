@@ -1,0 +1,65 @@
+﻿@{
+    Layout = null;
+}
+
+<div id="mensagem">@TempData["msg"]</div>
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/cadastro.css">
+    <title>Cadastro</title>
+</head>
+
+<body class="body_cadastro">
+    <div class="mae_cadastro">
+
+        <br><br>
+        <p class="msg_aviso">Faça seu cadastro e aproveite nossos Produtos!</p>
+        <p class="submsg_aviso">necessário para efetuar as compras</p>
+
+        <!-- Formulario que engloba todos os componentes -->
+        <form id="form_cadastro" method="post" asp-controller="Usuario" asp-action="Cadastrar">
+            <h1 id="Titulocadastro">Cadastro</h1>
+
+            <!-- Essa div engloba todos os inputs e suas respectivas identificaçoes tanto em ids como em subtitulos -->
+
+            <div id="Entradas">
+
+                <h2 class="subtitulocadastro">Nome completo</h2>
+                <input name="nome" class="entrada1" type="text" maxlength="100" required>
+
+                <h2 class="subtitulocadastro">Email</h2>
+                <input name="email" class="entrada1" type="text" maxlength="70" required>
+
+                <h2 class="subtitulocadastro">Usuário</h2>
+                <input name="nomeUsuario" class="entrada1" type="text" maxlength="50" required>
+
+                <h2 class="subtitulocadastro">CPF</h2>
+                <input name="cpf" class="entrada1" type="text" maxlength="11" required>
+
+                <h2 class="subtitulocadastro">Senha</h2>
+                <input name="senha" class="entrada1" type="password" maxlength="50" required>
+
+            </div>
+            <br>
+
+            <div id="Links">
+                <br><br>
+
+                <p class="texto_link_cad">Já tenho um cadastro </p>
+                <!-- Esse estará ligado ao link do home -->
+                <a id="esquerda" href="/Home" class="links_cadastro"><p> &lt- Voltar para a HOME</p></a><br>
+            </div>
+            <button id="botao_cadastrar">Cadastrar</button>
+        </form>
+        <br><br>
+    </div>
+   
+   
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+﻿@model IEnumerable<ProjetoJornada.Models.Produto>
+@using Microsoft.AspNetCore.Mvc;
+@using Microsoft.AspNetCore.Http;
+@using Newtonsoft.Json;
+
+
+@{
+    Layout = "_Layout";
+
+    Usuario u = JsonConvert.DeserializeObject<Usuario>(Context.Session.GetString("cliente"));
+    
+    double precototal = 0;
+
+}
+
+@if (Context.Session.GetString("cliente") != null)
+{
+    <link rel="stylesheet" href="~/css/carrinho1.css">
+    <div class="mae_carrinho1">
+        <div class="cabeca_carrinho">
+            <br>
+            <h1 class="titulo_carrinho">Seu Carrinho</h1>
+            <img src="~/img/propCarrinho.png" alt="propaganda" class="img_propaganda_carrinho_cab">
+        </div>
+
+        <section class="secao_produtos_carrinho">
+            <div class="div_produtos_carrinho">
+
+                @foreach (var item in Model)
+                {
+                    <form method="post" asp-controller="Produto" asp-action="ExcluirCarrinho">
+                        <div class="produto_carrinho">
+                            <div class="produto_carrinho_texto">
+                                <p id="">@item.Nome</p>
+         
+                                <p class="">@item.Preco.ToString("#.#0")</p>
+                            </div>
+
+                            <button type="submit" class="botao_excluir_carrinho">@Html.ActionLink("Excluir", "ExcluirCarrinho", "Produto", new { id = @item.Id })</button>
+                        </div>
+                    </form>
+
+                    precototal += item.Preco;
+                }
+
+                @{ 
+                    double frete = (precototal / 100) * 5;
+                    double precofrete = precototal + frete;
+
+                }
+            </div>
+
+            <div class="caixa_valores">
+                <div class="valor_produto">
+                    <br>
+                    <h2 class="titulo_valor_produto">Valor Total</h2>
+                    <hr class="linha_carrinho">
+                    <p class="valores">Valor dos produtos:</p>
+                    <p class="valor_pagamento"> R$@precototal.ToString("#.#0")</p>
+                    <p class="valoresf">Frete:</p>
+                    <p class="valor_frete"> R$ @frete.ToString("#.#0")</p>
+
+                    <p class="pag_total">R$ @precofrete.ToString("#.#0")</p>
+
+                    <br><br />
+                    <a href="/Produto/FinalizarCompra"><button class="botao_passo_2" id="verificar">Próximo passo</button></a>
+
+                </div>
+                <img src="~/img/carrinhoImg.png" alt="img produto" class="propaganda_produto_carrinho">
+            </div>
+        </section>
+    </div>
+
+    <script src="~/js/cep.js" type="module" defe></script>
+}
+else
+{
+    <p>Nao pode acessar aqui meu bem</p>
+}

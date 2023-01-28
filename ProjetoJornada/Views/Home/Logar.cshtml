@@ -1,0 +1,30 @@
+﻿
+
+<form class="form_login" method="post" asp-controller="Usuario" asp-action="Logar">
+
+    <div id="titulo">
+        <h1 id="titulo_login">Login</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+
+    <div id="entrada">
+
+        <h2 class="subtitulo_login">Usuario</h2>
+        <input name="nomeUsuario" type="text" class="input_login">
+        <h2 class="subtitulo_login">Senha</h2>
+        <input name="senha" type="password" class="input_login">
+
+    </div>
+    <div class="opcoes">
+        <a href="">&lt- Voltar para a home</a>
+        <a id="esquecisenha" href="/Home/SenhaPerdida">Esqueci minha senha</a>
+    </div>
+    <button type="submit" value="Logar" class="button_login">Entrar</button>
+
+    <div id="link">
+        <p>Não possui um login?</p>
+
+        <a id="home" href="/Home/Cadastro">Fazer cadastro...</a>
+
+    </div>
+</form>

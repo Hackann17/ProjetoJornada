@@ -1,0 +1,34 @@
+﻿@model IEnumerable<ProjetoJornada.Models.Usuario>;
+@{
+    Layout = null;
+}
+
+<link rel="stylesheet" href="~/css/listarclientes.css">
+<main class="conteudo_cliente">
+    <br>
+    <div id="color_titulo_fundo">
+        <h2 class="titulo_lista_clientes">Lista de Clientes</h2>
+    </div>
+
+    <a href="/Admin/PainelAdm"><button class="botao_add_listagem">Ir para Administração</button></a>
+
+    <br>
+    <br>
+    <!-- Listagem dos Clientes -->
+    @foreach (var cliente in Model)
+    {
+        <div id="listaClientes">
+            <ul>
+                <li>Nome do Cliente: @cliente.Nome</li>
+                <li>Nome de Usuário: @cliente.NomeUsuario</li>
+                <li>E-Mail: @cliente.Email</li>
+            </ul>
+        </div>
+
+        <br />
+
+    }
+
+
+
+</main>
